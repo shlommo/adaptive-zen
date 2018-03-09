@@ -1,0 +1,136 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1024px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	// .app-grid__cell--s
+		// grid-column: span 3
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 568px)
+	$base-font-size: 12
+
+	html
+		font-size: $base-font-size * 1px
+		
+	.app-grid__cell--s,
+	.app-grid__cell--m
+		grid-column: span 6
+
+	.zen-app
+		max-width: none
+
+	.article__title
+	  max-height: calcFromBaseFontSize(72, $base-font-size)
+
+	.article__footer
+		height: calcFromBaseFontSize(32, $base-font-size)
+
+	.app-grid__cell--l .article__content
+		grid-template-columns: none
+		grid-template-rows: auto 1fr calcFromBaseFontSize(62, $base-font-size)
+		height: calcFromBaseFontSize(304, $base-font-size)
+		max-height: none
+
+	.app-grid__cell--l .article__img-wrapper
+		height: auto
+		grid-column-start: auto
+		grid-column-end: auto
+		grid-row-start: 2
+		grid-row-end: 3
+
+	.app-grid__cell--l .article__title
+		grid-row-start: auto
+		grid-row-end: auto
+		grid-column-start: auto
+		grid-column-end: auto
+
+	.app-grid__cell--l .article__description
+		grid-row-start: 3
+		grid-row-end: 4
+		grid-column-start: auto
+		grid-column-end: auto
+		padding-top: 8px
+		padding-right: 48px
+		padding-bottom: 0
+
+	.app-grid__cell--l .article__footer
+		position: absolute
+		top: 8px
+		right: 4px
+		bottom: 0
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		height: auto
+
+	.app-grid__cell--m .article__content
+		grid-template-rows: auto 1fr calcFromBaseFontSize(62, $base-font-size)
+		height: calcFromBaseFontSize(304, $base-font-size)
+		max-height: none
+
+	.app-grid__cell--s .article__content-wrapper
+	  max-height: calcFromBaseFontSize(224, $base-font-size)
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 1025px)
+	.zen-app
+		max-width: calc((704 / 1024) * 100vw)
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1400px)
+	$base-font-size: 16
+
+	html
+		font-size: $base-font-size * 1px
+		
+	.article__title
+	  max-height: calcFromBaseFontSize(88, $base-font-size)
+
+	
+	.article__footer
+		height: calcFromBaseFontSize(52, $base-font-size)
+
+	.app-grid__cell--l .article__content
+		// height: calc((244 / 1024) * 100vw)
+		height: calcFromBaseFontSize(244, $base-font-size)
+		max-height: none
+
+	.app-grid__cell--l .article__img-wrapper
+		// height: calc((244 / 1024) * 100vw)
+		height: calcFromBaseFontSize(244, $base-font-size)
+	
+	.app-grid__cell--m .article__content
+		grid-template-rows: auto 1fr calcFromBaseFontSize(78, $base-font-size)
+		// height: calc((304 / 1024) * 100vw)
+		height: calcFromBaseFontSize(304, $base-font-size)
+		max-height: none
+
+	.app-grid__cell--s .article__content-wrapper
+		// height: calc((244 / 1024) * 100vw)
+		height: calcFromBaseFontSize(244, $base-font-size)
+		max-height: none
+
+	.app-grid__cell--s .article__content-wrapper
+		height: calcFromBaseFontSize(244, $base-font-size)

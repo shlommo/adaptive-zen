@@ -1,0 +1,50 @@
+@import "vars"
+@import "_functions/calc-from-base-font-size"
+@import "fonts"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html
+	font-size: $base-font-size * 1px
+
+html, body
+	height: 100%
+	margin: 0
+	padding: 0
+
+body
+	min-width: 320px
+	position: relative
+	line-height: 1.42
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+p,
+h2,
+ul
+	margin: 0
+	padding: 0
+
+ul
+	list-style: none
+
+
+@import "_blocks/_zen-app.sass"
+@import "_blocks/_logo.sass"
+@import "_blocks/_app-grid.sass"
+@import "_blocks/_article.sass"
+@import "_blocks/_icon-btn.sass"
+@import "media" // Always at the end
